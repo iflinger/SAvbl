@@ -1,3 +1,8 @@
+'###
+SAvblVersionName = "PreMerge"
+SAvblVersionNumber = "0.1"
+
+'##############################################################
 '### Error detection and handling
 '==============================================================
 Sub ShowErr
@@ -8,4 +13,21 @@ Sub ShowErr
 	Wscript.Echo Err.Source
 	Wscript.Echo "-------------------" 
 End sub
+
+'##############################################################
+'### Help
+'==============================================================
+sub ShowHelp
+	WScript.Echo "-------------------------------------------------------------------------------"
+	WScript.Echo " SAvbl - v.: " & SAvblVersionNumber & " - " & """" & SAvblVersionName & """"
+	WScript.Echo "-------------------------------------------------------------------------------"
+	WScript.Echo
+	WScript.Echo "   Usage:"
+	WScript.Echo 
+	WScript.Echo  
+	WScript.Echo "	/LOG:<file path> - Creates log about deleted items. (overwrites existing log)" 
+	WScript.Echo "	/LOG+:<file path> - Creates log about deleted items. (append to existing log)"
+	WScript.Echo "	/LOG - Creates log with default log name (.date-time.log), to the script's dir.)"
+	WScript.Echo 
+end sub
 '==============================================================
