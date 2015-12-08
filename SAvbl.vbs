@@ -51,6 +51,13 @@ function ReadFile2Array(strFileLocation) ' v.1 - Returns array with file's conte
 	end if
 	ReadFile2Array = arrFileRows
 End Function
+'==============================================================
+function WhoIsRunningThis
+	'------------------------------------------------------------------
+	dim objNetwork : set objNetwork = CreateObject("WScript.NetWork") 
+	'------------------------------------------------------------------
+	WhoIsRunningThis = objNetwork.UserDomain & "\" & objNetwork.UserName & " on " & objNetwork.ComputerName
+end function
 
 '##############################################################
 '### Logging & Log handling
